@@ -116,12 +116,16 @@ export default function RootLayout({
               textAlign: "center",
               fontSize: "0.65rem",
               color: "var(--muted)",
-              opacity: 0.5,
+              opacity: 0.45,
             }}
           >
-            <a href="/privacy" style={{ color: "inherit", textDecoration: "none", marginInlineEnd: "1rem" }}>سياسة الخصوصية</a>
+            <span>المحتوى لأغراض أدبية وتعليمية فقط</span>
+            <span style={{ margin: "0 0.5rem" }}>·</span>
+            <a href="/privacy" style={{ color: "inherit", textDecoration: "none" }}>سياسة الخصوصية</a>
+            <span style={{ margin: "0 0.5rem" }}>·</span>
             <a href="/terms" style={{ color: "inherit", textDecoration: "none" }}>شروط الاستخدام</a>
-            <span style={{ marginInlineStart: "1rem" }}>© {new Date().getFullYear()} shi3r.com</span>
+            <span style={{ margin: "0 0.5rem" }}>·</span>
+            <span>© {new Date().getFullYear()} shi3r.com</span>
           </footer>
         </ThemeProvider>
       </body>
