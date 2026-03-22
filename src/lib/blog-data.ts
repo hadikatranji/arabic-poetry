@@ -39,6 +39,56 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8 دقائق",
     tags: ["تعليم", "بحور", "حفظ"],
   },
+  {
+    slug: "nizar-qabbani-best-verses",
+    title: "نزار قباني — أجمل أبياته في الحب والوطن",
+    titleEn: "Nizar Qabbani — Best Verses on Love and Homeland",
+    description:
+      "رحلة في شعر نزار قباني: من غزله الثوري إلى قصائده السياسية. أجمل أبياته مع شرح معانيها وأثرها في الأدب العربي الحديث.",
+    date: "2026-03-22",
+    readTime: "8 دقائق",
+    tags: ["نزار قباني", "غزل", "حديث"],
+  },
+  {
+    slug: "pre-islamic-poetry",
+    title: "الشعر الجاهلي — عصر المعلقات والفروسية",
+    titleEn: "Pre-Islamic Arabic Poetry — The Age of the Muallaqat",
+    description:
+      "اكتشف الشعر الجاهلي: تاريخه وأهم شعرائه والمعلقات السبع. لماذا يظلّ هذا الشعر أساس اللغة العربية والثقافة الإسلامية؟",
+    date: "2026-03-22",
+    readTime: "9 دقائق",
+    tags: ["جاهلي", "معلقات", "تاريخ"],
+  },
+  {
+    slug: "arabic-love-poetry",
+    title: "الغزل في الشعر العربي — من العذري إلى الحديث",
+    titleEn: "Love Poetry in Arabic Literature — From Udhri to Modern",
+    description:
+      "جولة في الغزل العربي عبر العصور: الحب العذري العفيف، والغزل الصريح، وشعر المحدثين. أجمل أبيات الحب في تاريخ الأدب العربي.",
+    date: "2026-03-22",
+    readTime: "7 دقائق",
+    tags: ["غزل", "حب", "شعر"],
+  },
+  {
+    slug: "how-to-memorize-poetry",
+    title: "كيف تحفظ الشعر بسرعة — 5 تقنيات علمية",
+    titleEn: "How to Memorize Arabic Poetry Fast — 5 Proven Techniques",
+    description:
+      "خمس تقنيات علمية لحفظ الشعر العربي بسرعة وثبات: من الفهم إلى الإيقاع إلى التكرار المتباعد. دليل عملي للمبتدئين والمتقدمين.",
+    date: "2026-03-22",
+    readTime: "6 دقائق",
+    tags: ["حفظ", "تعليم", "تقنيات"],
+  },
+  {
+    slug: "arabic-words-for-love",
+    title: "مراتب الحب في اللغة العربية — ١٢ درجة من الهوى إلى التعبّد",
+    titleEn: "12 Arabic Words for Love — The Stages of Love in Arabic",
+    description:
+      "العربية لغة الحب بامتياز — فيها ١٢ مرتبة للحب من الميل البسيط إلى التعبّد الكامل. تعرّف على كل مرتبة مع الشواهد الشعرية.",
+    date: "2026-03-22",
+    readTime: "7 دقائق",
+    tags: ["لغة", "حب", "ثقافة"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
