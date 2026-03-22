@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ThemeToggle from "@/components/ThemeToggle";
-import ShareButtons from "@/components/ShareButtons";
+import BlogPostLayout from "@/components/BlogPost";
+import { getPostBySlug } from "@/lib/blog-data";
+
+const post = getPostBySlug("top-10-mutanabbi")!;
 
 export const metadata: Metadata = {
-  title: "أجمل 10 أبيات للمتنبي",
-  description:
-    "اكتشف أجمل وأشهر أبيات أبي الطيب المتنبي، أعظم شعراء العرب، مع شرح معاني كل بيت",
+  title: post.title,
+  description: post.description,
   openGraph: {
-    title: "أجمل 10 أبيات للمتنبي | مسامرات شعرية",
-    description: "حكمة المتنبي في أجمل 10 أبيات",
+    title: `${post.title} | مسامرات شعرية`,
+    description: post.description,
   },
 };
+
+const TOC = [
+  { id: "intro", title: "من هو المتنبي؟" },
+  { id: "verses", title: "أجمل 10 أبيات" },
+  { id: "legacy", title: "لماذا يبقى المتنبي؟" },
+];
 
 const VERSES = [
   { h1: "على قدر أهل العزم تأتي العزائمُ", h2: "وتأتي على قدر الكرام المكارمُ", meaning: "العزيمة والهمّة تكون على قدر صاحبها — فمن كانت همّته عالية أتته المعالي." },
@@ -28,66 +35,70 @@ const VERSES = [
 
 export default function Top10MutanabbiPost() {
   return (
-    <main className="min-h-screen max-w-2xl mx-auto px-6 py-8">
-      <div className="flex items-center justify-between mb-8">
-        <Link href="/blog" className="text-[var(--muted)] hover:text-[var(--fg)] text-sm">
-          العودة للمدوّنة
-        </Link>
-        <ThemeToggle />
-      </div>
-
-      <article>
-        <div className="text-xs text-[var(--muted)] mb-4">
-          <time>2026-03-22</time> · 7 دقائق
-        </div>
-
-        <h1 className="text-3xl mb-6">أجمل 10 أبيات للمتنبي</h1>
-
-        <div className="mb-8">
-          <ShareButtons
-            url="https://shi3r.com/blog/posts/top-10-mutanabbi"
-            title="أجمل 10 أبيات للمتنبي — مسامرات شعرية"
-            text="اكتشف أجمل أبيات المتنبي مع شرح المعاني"
-          />
-        </div>
-
-        <p className="text-sm text-[var(--muted)] mb-8 leading-relaxed">
-          أبو الطيب المتنبي (915-965م) — أعظم شعراء العرب وأكثرهم حكمةً.
-          ملأ الدنيا وشغل الناس بأبيات لا تزال تُردَّد بعد أكثر من ألف عام.
-          إليك أجمل 10 أبيات مع شرح معانيها.
+    <BlogPostLayout post={post} tableOfContents={TOC}>
+      {/* Intro */}
+      <section id="intro">
+        <h2 className="text-xl text-[var(--accent)] mt-2 mb-3">من هو المتنبي؟</h2>
+        <p>
+          أبو الطيب أحمد بن الحسين الجعفي الكندي (915-965م)، المعروف بالمتنبي،
+          هو أعظم شعراء العربية على الإطلاق. وُلد في الكوفة وعاش في بلاط سيف
+          الدولة الحمداني في حلب. ملأ الدنيا وشغل الناس بشعره الذي لا يزال
+          يُردَّد بعد أكثر من ألف عام.
         </p>
+        <p>
+          تميّز شعره بالحكمة العميقة والفخر والمدح، واستخدم لغةً قوية وصوراً
+          شعرية لم يسبقه إليها أحد. في هذا المقال نستعرض أجمل عشرة أبيات له
+          مع شرح معانيها.
+        </p>
+      </section>
 
+      {/* Verses */}
+      <section id="verses">
+        <h2 className="text-xl text-[var(--accent)] mt-8 mb-4">أجمل 10 أبيات</h2>
         <div className="space-y-8">
           {VERSES.map((verse, i) => (
             <div
               key={i}
-              className="p-6 bg-[var(--surface)] border border-[var(--border)] rounded-md"
+              className="p-5 bg-[var(--surface)] border border-[var(--border)] rounded-md"
             >
-              <div className="text-xs text-[var(--accent)] mb-3">
-                {i + 1}.
-              </div>
+              <div className="text-xs text-[var(--accent)] mb-3">{i + 1}.</div>
               <p className="verse-text text-lg text-center mb-4">
                 {verse.h1}
                 <span className="hemistich-separator">✶</span>
                 {verse.h2}
               </p>
-              <p className="text-sm text-[var(--muted)] leading-relaxed">
-                {verse.meaning}
+              <p className="text-[var(--muted)] leading-relaxed">
+                <strong className="text-[var(--fg)]">المعنى:</strong> {verse.meaning}
               </p>
             </div>
           ))}
         </div>
+      </section>
 
-        <div className="mt-10 p-6 bg-[var(--surface)] border border-[var(--border)] rounded-md text-center">
-          <p className="text-[var(--accent)] mb-4">اقرأ المزيد من أشعار المتنبي</p>
-          <Link
-            href="/poets/10"
-            className="inline-block bg-[var(--fg)] text-[var(--bg)] px-6 py-2 rounded text-sm hover:opacity-80 transition-opacity"
-          >
-            صفحة المتنبي
-          </Link>
-        </div>
-      </article>
-    </main>
+      {/* Legacy */}
+      <section id="legacy">
+        <h2 className="text-xl text-[var(--accent)] mt-8 mb-3">لماذا يبقى المتنبي؟</h2>
+        <p>
+          يبقى المتنبي حياً في وجدان العرب لأن أبياته ليست مجرد شعر — بل هي
+          حكمة عملية تصلح لكل زمان. حين تواجه تحدياً تتذكر &ldquo;على قدر أهل العزم&rdquo;،
+          وحين تُحبط تتذكر &ldquo;تجري الرياح بما لا تشتهي السفن&rdquo;.
+        </p>
+        <p>
+          هذا هو سرّ خلود الشعر العربي: أنه لا يتحدث عن زمنه فقط، بل عن
+          الإنسان في كل زمن.
+        </p>
+      </section>
+
+      {/* CTA to poet page */}
+      <div className="mt-8 p-5 bg-[var(--surface)] border border-[var(--border)] rounded-md text-center">
+        <p className="text-[var(--accent)] mb-3">اقرأ المزيد من أشعار المتنبي</p>
+        <Link
+          href="/poets/10"
+          className="inline-block bg-[var(--fg)] text-[var(--bg)] px-6 py-2 rounded text-sm hover:opacity-80 transition-opacity"
+        >
+          صفحة المتنبي
+        </Link>
+      </div>
+    </BlogPostLayout>
   );
 }
