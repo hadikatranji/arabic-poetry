@@ -107,7 +107,46 @@ export default function RootLayout({
       <body
         className={`${amiri.variable} ${arefRuqaa.variable} font-aref antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <footer
+            dir="rtl"
+            style={{
+              borderTop: "1px solid var(--border)",
+              background: "var(--surface)",
+              padding: "1rem 1.5rem",
+              textAlign: "center",
+              fontSize: "0.8rem",
+              color: "var(--muted)",
+            }}
+          >
+            <nav
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "1.5rem",
+                flexWrap: "wrap",
+                marginBottom: "0.5rem",
+              }}
+            >
+              <a
+                href="/privacy"
+                style={{ color: "var(--muted)", textDecoration: "none" }}
+              >
+                سياسة الخصوصية
+              </a>
+              <a
+                href="/terms"
+                style={{ color: "var(--muted)", textDecoration: "none" }}
+              >
+                شروط الاستخدام
+              </a>
+            </nav>
+            <p style={{ margin: 0 }}>
+              © {new Date().getFullYear()} مسامرات شعرية — shi3r.com
+            </p>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
