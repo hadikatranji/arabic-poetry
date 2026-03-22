@@ -1,0 +1,272 @@
+/**
+ * Poet data for the poetry app.
+ */
+
+export interface Poet {
+  id: number;
+  nameAr: string;
+  nameEn: string;
+  era: string;
+  birthYear: number | null;
+  deathYear: number | null;
+  dateSystem: string;
+  biographyAr: string;
+  styleNotes: string;
+}
+
+export const SAMPLE_POETS: Poet[] = [
+  // === العصر الجاهلي ===
+  {
+    id: 1,
+    nameAr: "امرؤ القيس",
+    nameEn: "Imru' al-Qais",
+    era: "جاهلي",
+    birthYear: 501,
+    deathYear: 544,
+    dateSystem: "gregorian",
+    biographyAr: "امرؤ القيس بن حجر الكندي، الملك الضليل. أشهر شعراء العرب وصاحب أول معلقة. أمير شاعر طُرد من ملكه فسار يطلب ثأر أبيه.",
+    styleNotes: "الغزل والوصف والفخر، صاحب أشهر معلقة",
+  },
+  {
+    id: 2,
+    nameAr: "عنترة بن شداد",
+    nameEn: "Antara ibn Shaddad",
+    era: "جاهلي",
+    birthYear: 525,
+    deathYear: 608,
+    dateSystem: "gregorian",
+    biographyAr: "عنترة بن شداد العبسي، فارس وشاعر من أصحاب المعلقات. اشتهر بشجاعته وحبه لابنة عمه عبلة. كان عبداً أسود فأعتقه أبوه لشجاعته.",
+    styleNotes: "الفخر والحماسة والغزل العفيف",
+  },
+  {
+    id: 3,
+    nameAr: "زهير بن أبي سلمى",
+    nameEn: "Zuhayr ibn Abi Sulma",
+    era: "جاهلي",
+    birthYear: 520,
+    deathYear: 609,
+    dateSystem: "gregorian",
+    biographyAr: "زهير بن أبي سلمى المزني، أحد أصحاب المعلقات وحكيم شعراء الجاهلية. كان يُنقّح شعره ولا ينشره إلا بعد حولٍ كامل.",
+    styleNotes: "الحكمة والمدح والوصف، شعر منقّح ومحكم",
+  },
+  {
+    id: 4,
+    nameAr: "طرفة بن العبد",
+    nameEn: "Tarafa ibn al-Abd",
+    era: "جاهلي",
+    birthYear: 543,
+    deathYear: 569,
+    dateSystem: "gregorian",
+    biographyAr: "طرفة بن العبد البكري، شاعر جاهلي من أصحاب المعلقات. أصغر شعراء المعلقات سناً، قُتل شاباً بأمر عمرو بن هند.",
+    styleNotes: "وصف الناقة والحياة، صاحب معلقة",
+  },
+  {
+    id: 5,
+    nameAr: "لبيد بن ربيعة",
+    nameEn: "Labid ibn Rabi'a",
+    era: "جاهلي",
+    birthYear: 560,
+    deathYear: 661,
+    dateSystem: "gregorian",
+    biographyAr: "لبيد بن ربيعة العامري، شاعر جاهلي مخضرم من أصحاب المعلقات. أسلم وترك الشعر بعد الإسلام.",
+    styleNotes: "الرثاء والحكمة والوصف",
+  },
+  {
+    id: 6,
+    nameAr: "النابغة الذبياني",
+    nameEn: "Al-Nabigha al-Dhubyani",
+    era: "جاهلي",
+    birthYear: 535,
+    deathYear: 604,
+    dateSystem: "gregorian",
+    biographyAr: "زياد بن معاوية الذبياني، شاعر جاهلي كبير. كان حكم الشعراء في سوق عكاظ. اشتهر بمدح النعمان بن المنذر.",
+    styleNotes: "المدح والاعتذار، لغة رصينة",
+  },
+
+  // === العصر الأموي ===
+  {
+    id: 7,
+    nameAr: "مجنون ليلى",
+    nameEn: "Qays ibn al-Mulawwah",
+    era: "أموي",
+    birthYear: 645,
+    deathYear: 688,
+    dateSystem: "gregorian",
+    biographyAr: "قيس بن الملوّح العامري. شاعر غزل عذري هام بحب ليلى العامرية حتى جُنّ، فلُقّب بمجنون ليلى.",
+    styleNotes: "الغزل العذري والحب العفيف",
+  },
+  {
+    id: 8,
+    nameAr: "جرير",
+    nameEn: "Jarir",
+    era: "أموي",
+    birthYear: 653,
+    deathYear: 733,
+    dateSystem: "gregorian",
+    biographyAr: "جرير بن عطية الخطفي التميمي. من أشهر شعراء العصر الأموي. اشتهر بالهجاء والمدح والنقائض مع الفرزدق.",
+    styleNotes: "الهجاء والمدح والغزل والنقائض",
+  },
+  {
+    id: 9,
+    nameAr: "الفرزدق",
+    nameEn: "Al-Farazdaq",
+    era: "أموي",
+    birthYear: 641,
+    deathYear: 732,
+    dateSystem: "gregorian",
+    biographyAr: "همّام بن غالب التميمي. من فحول شعراء العرب في العصر الأموي. اشتهر بالنقائض مع جرير والفخر بقومه.",
+    styleNotes: "الفخر والهجاء والنقائض",
+  },
+
+  // === العصر العباسي ===
+  {
+    id: 10,
+    nameAr: "المتنبي",
+    nameEn: "Al-Mutanabbi",
+    era: "عباسي",
+    birthYear: 915,
+    deathYear: 965,
+    dateSystem: "gregorian",
+    biographyAr: "أبو الطيب أحمد بن الحسين الجعفي الكندي. أعظم شعراء العرب وأكثرهم تمكناً من اللغة. ملأ الدنيا وشغل الناس.",
+    styleNotes: "الحكمة والفخر والمدح",
+  },
+  {
+    id: 11,
+    nameAr: "أبو نواس",
+    nameEn: "Abu Nuwas",
+    era: "عباسي",
+    birthYear: 756,
+    deathYear: 814,
+    dateSystem: "gregorian",
+    biographyAr: "الحسن بن هانئ الحكمي. شاعر عباسي رائد الخمريات في الشعر العربي. جدّد في الشعر وثار على التقاليد.",
+    styleNotes: "الخمريات والغزل والهجاء",
+  },
+  {
+    id: 12,
+    nameAr: "أبو العلاء المعري",
+    nameEn: "Al-Ma'arri",
+    era: "عباسي",
+    birthYear: 973,
+    deathYear: 1057,
+    dateSystem: "gregorian",
+    biographyAr: "أحمد بن عبد الله التنوخي. شاعر وفيلسوف ضرير. صاحب لزوم ما لا يلزم وسقط الزند ورسالة الغفران.",
+    styleNotes: "الحكمة والفلسفة والتأمل",
+  },
+  {
+    id: 13,
+    nameAr: "أبو فراس الحمداني",
+    nameEn: "Abu Firas al-Hamdani",
+    era: "عباسي",
+    birthYear: 932,
+    deathYear: 968,
+    dateSystem: "gregorian",
+    biographyAr: "الحارث بن سعيد الحمداني. أمير وشاعر وفارس. ابن عم سيف الدولة. أسره الروم فكتب الروميات في الأسر.",
+    styleNotes: "الحماسة والشوق والروميات",
+  },
+  {
+    id: 14,
+    nameAr: "أبو تمام",
+    nameEn: "Abu Tammam",
+    era: "عباسي",
+    birthYear: 796,
+    deathYear: 845,
+    dateSystem: "gregorian",
+    biographyAr: "حبيب بن أوس الطائي. شاعر عباسي كبير وجامع ديوان الحماسة. أستاذ البحتري.",
+    styleNotes: "المدح والحماسة والبديع",
+  },
+  {
+    id: 15,
+    nameAr: "البحتري",
+    nameEn: "Al-Buhturi",
+    era: "عباسي",
+    birthYear: 821,
+    deathYear: 897,
+    dateSystem: "gregorian",
+    biographyAr: "الوليد بن عبيد الطائي. شاعر عباسي كبير تلميذ أبي تمام. لُقّب بشاعر الطبيعة لجمال وصفه.",
+    styleNotes: "الوصف والمدح وعمود الشعر",
+  },
+
+  // === العصر الحديث ===
+  {
+    id: 16,
+    nameAr: "أحمد شوقي",
+    nameEn: "Ahmad Shawqi",
+    era: "حديث",
+    birthYear: 1868,
+    deathYear: 1932,
+    dateSystem: "gregorian",
+    biographyAr: "أحمد شوقي بك. أمير الشعراء. أعظم شعراء العربية في العصر الحديث. رائد المسرح الشعري العربي.",
+    styleNotes: "الوطنيات والمدح والمسرح الشعري",
+  },
+  {
+    id: 17,
+    nameAr: "حافظ إبراهيم",
+    nameEn: "Hafiz Ibrahim",
+    era: "حديث",
+    birthYear: 1872,
+    deathYear: 1932,
+    dateSystem: "gregorian",
+    biographyAr: "محمد حافظ إبراهيم. شاعر النيل. عُرف بشعره الاجتماعي والوطني. صديق أحمد شوقي ومنافسه.",
+    styleNotes: "الشعر الاجتماعي والوطني",
+  },
+  {
+    id: 18,
+    nameAr: "نزار قباني",
+    nameEn: "Nizar Qabbani",
+    era: "حديث",
+    birthYear: 1923,
+    deathYear: 1998,
+    dateSystem: "gregorian",
+    biographyAr: "شاعر سوري ودبلوماسي. شاعر المرأة والحب. أصدر أكثر من 35 ديواناً. جدّد في الشعر العربي الحديث.",
+    styleNotes: "الغزل الحديث والسياسة",
+  },
+  {
+    id: 19,
+    nameAr: "محمود درويش",
+    nameEn: "Mahmoud Darwish",
+    era: "حديث",
+    birthYear: 1941,
+    deathYear: 2008,
+    dateSystem: "gregorian",
+    biographyAr: "شاعر فلسطيني. شاعر المقاومة والهوية. من أهم الشعراء العرب المعاصرين.",
+    styleNotes: "المقاومة والهوية والحنين",
+  },
+  {
+    id: 20,
+    nameAr: "إيليا أبو ماضي",
+    nameEn: "Elia Abu Madi",
+    era: "حديث",
+    birthYear: 1889,
+    deathYear: 1957,
+    dateSystem: "gregorian",
+    biographyAr: "شاعر لبناني مهجري. من أبرز شعراء المهجر. اشتهر بالتفاؤل والتأمل الفلسفي.",
+    styleNotes: "التفاؤل والفلسفة والطبيعة",
+  },
+];
+
+export function getPoetById(id: number): Poet | undefined {
+  return SAMPLE_POETS.find((p) => p.id === id);
+}
+
+const ERA_ORDER: Record<string, number> = {
+  "جاهلي": 1,
+  "أموي": 2,
+  "عباسي": 3,
+  "حديث": 4,
+};
+
+export function getPoetsByEra(): Record<string, Poet[]> {
+  const grouped: Record<string, Poet[]> = {};
+  for (const poet of SAMPLE_POETS) {
+    if (!grouped[poet.era]) grouped[poet.era] = [];
+    grouped[poet.era].push(poet);
+  }
+  const sorted: Record<string, Poet[]> = {};
+  const sortedKeys = Object.keys(grouped).sort(
+    (a, b) => (ERA_ORDER[a] ?? 99) - (ERA_ORDER[b] ?? 99)
+  );
+  for (const key of sortedKeys) {
+    sorted[key] = grouped[key];
+  }
+  return sorted;
+}

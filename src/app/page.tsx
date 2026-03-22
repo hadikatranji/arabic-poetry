@@ -1,101 +1,98 @@
-import Image from "next/image";
+import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
+
+// JSON-LD structured data for search engines
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "مسامرات شعرية",
+  alternateName: "Poetry Nights",
+  description:
+    "تعلّم الشعر العربي وتحدَّ نفسك في المساجلة الشعرية — 20 شاعراً و120+ بيت",
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Web",
+  inLanguage: "ar",
+  author: {
+    "@type": "Person",
+    name: "Hadi Katranji",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="min-h-screen flex flex-col items-center px-6 pt-20 pb-16">
+        {/* Theme toggle */}
+        <div className="fixed top-5 left-5 z-20">
+          <ThemeToggle />
+        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* Ornament */}
+        <p className="ornament mb-6">٭ ٭ ٭</p>
+
+        {/* Title */}
+        <h1 className="text-5xl md:text-7xl text-center mb-3 leading-tight">
+          مسامرات شعرية
+        </h1>
+
+        {/* Welcome */}
+        <p className="text-center text-[var(--muted)] text-lg max-w-md leading-relaxed mb-4">
+          أهلاً بك في مجلس الشعر
+        </p>
+        <p className="text-center text-[var(--muted)] text-sm max-w-sm leading-relaxed mb-16">
+          تصفّح دواوين الشعراء، احفظ الأبيات، أو ادخل المساجلة وتحدَّ نفسك
+        </p>
+
+        {/* Navigation */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-md w-full mb-20">
+          <NavCard href="/musajalah" title="المساجلة" desc="مبارزة شعرية" />
+          <NavCard href="/poets" title="الشعراء" desc="حياتهم وأشعارهم" />
+          <NavCard href="/memorize" title="الحفظ" desc="تسميع تفاعلي" />
+          <NavCard href="/poems" title="الأبيات" desc="تصفّح وابحث" />
+        </div>
+
+        {/* Ornament */}
+        <p className="ornament mb-8">❊</p>
+
+        {/* A verse */}
+        <div className="text-center max-w-lg">
+          <p className="verse-text text-xl">
+            على قدر أهل العزم تأتي العزائمُ
+            <span className="hemistich-separator">✶</span>
+            وتأتي على قدر الكرام المكارمُ
+          </p>
+          <p className="text-[var(--muted)] text-xs mt-4">— المتنبي</p>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
+  );
+}
+
+function NavCard({
+  href,
+  title,
+  desc,
+}: {
+  href: string;
+  title: string;
+  desc: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="block px-6 py-5 border border-[var(--border)] rounded-md hover:border-[var(--accent)] hover:bg-[var(--surface)] transition-all group"
+    >
+      <h2 className="text-2xl group-hover:text-[var(--accent)] transition-colors">{title}</h2>
+      <p className="text-sm text-[var(--muted)] mt-1">{desc}</p>
+    </Link>
   );
 }

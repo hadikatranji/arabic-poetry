@@ -2,26 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light mode — warm parchment feel */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f7f3ec;
+  --fg: #2c1810;
+  --muted: #8a7560;
+  --border: #d4c5b0;
+  --surface: #efe9df;
+  --accent: #8b5e34;
+  --accent-light: #c4956a;
+  --gold: #b8860b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode — deep ink night */
+.dark {
+  --bg: #1a1410;
+  --fg: #e8dcc8;
+  --muted: #9a8b78;
+  --border: #3a3028;
+  --surface: #241e18;
+  --accent: #c4956a;
+  --accent-light: #d4a574;
+  --gold: #d4a017;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.verse-text {
+  font-family: var(--font-amiri), serif;
+  line-height: 2.4;
+  letter-spacing: 0.01em;
+}
+
+.hemistich-separator {
+  display: inline-block;
+  width: 2.5rem;
+  text-align: center;
+  color: var(--gold);
+  font-size: 0.8em;
+}
+
+/* Ornamental divider */
+.ornament {
+  color: var(--gold);
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
+::selection {
+  background-color: var(--accent-light);
+  color: var(--bg);
+}
+
+/* Subtle gold underline for links */
+a.gold-link {
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+}
+
+/* Input styling */
+input, textarea, select {
+  font-family: var(--font-aref), serif;
 }
