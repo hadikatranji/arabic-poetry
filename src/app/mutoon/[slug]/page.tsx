@@ -55,18 +55,17 @@ export default function MatnPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Audio */}
-      {matn.youtubeId && (
+      {matn.youtubeSearch && (
         <div className="mb-8">
-          <h2 className="text-lg text-[var(--accent)] mb-3">الاستماع</h2>
-          <div className="aspect-video rounded-md overflow-hidden border border-[var(--border)]">
-            <iframe
-              src={`https://www.youtube.com/embed/${matn.youtubeId}`}
-              title={`${matn.title} — استماع`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
-          </div>
+          <a
+            href={matn.youtubeSearch}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block p-5 bg-[var(--surface)] border border-[var(--border)] rounded-md hover:border-[var(--accent)] transition-all text-center"
+          >
+            <p className="text-lg mb-1">استمع إلى {matn.title}</p>
+            <p className="text-sm text-[var(--muted)]">ابحث على يوتيوب ←</p>
+          </a>
         </div>
       )}
 
