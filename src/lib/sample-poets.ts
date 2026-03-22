@@ -218,7 +218,7 @@ export const SAMPLE_POETS: Poet[] = [
     deathYear: 1998,
     dateSystem: "gregorian",
     biographyAr: "شاعر سوري ودبلوماسي. شاعر المرأة والحب. أصدر أكثر من 35 ديواناً. جدّد في الشعر العربي الحديث.",
-    styleNotes: "الغزل الحديث والسياسة",
+    styleNotes: "الغزل الحديث والقضايا الاجتماعية",
   },
   {
     id: 19,
@@ -228,8 +228,8 @@ export const SAMPLE_POETS: Poet[] = [
     birthYear: 1941,
     deathYear: 2008,
     dateSystem: "gregorian",
-    biographyAr: "شاعر فلسطيني. شاعر المقاومة والهوية. من أهم الشعراء العرب المعاصرين.",
-    styleNotes: "المقاومة والهوية والحنين",
+    biographyAr: "شاعر فلسطيني. من أبرز أصوات الشعر العربي المعاصر. عُرف بتأملاته في الهوية والانتماء والوطن.",
+    styleNotes: "الهوية والحنين والتأمل الإنساني",
   },
   {
     id: 20,
