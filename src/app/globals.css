@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base font size — larger for readability (40-50 age group) */
+html {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 /* Light mode — warm parchment feel */
 :root {
   --bg: #f7f3ec;
   --fg: #2c1810;
-  --muted: #8a7560;
+  --muted: #6b5a48;
   --border: #d4c5b0;
   --surface: #efe9df;
   --accent: #8b5e34;
@@ -18,7 +29,7 @@
 .dark {
   --bg: #1a1410;
   --fg: #e8dcc8;
-  --muted: #9a8b78;
+  --muted: #b0a090;
   --border: #3a3028;
   --surface: #241e18;
   --accent: #c4956a;
@@ -34,8 +45,15 @@ body {
 
 .verse-text {
   font-family: var(--font-amiri), serif;
-  line-height: 2.4;
+  font-size: 1.3rem;
+  line-height: 2.6;
   letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+  .verse-text {
+    font-size: 1.5rem;
+  }
 }
 
 .hemistich-separator {
@@ -58,7 +76,6 @@ body {
   color: var(--bg);
 }
 
-/* Subtle gold underline for links */
 a.gold-link {
   text-decoration-color: var(--gold);
   text-underline-offset: 4px;
@@ -67,4 +84,5 @@ a.gold-link {
 /* Input styling */
 input, textarea, select {
   font-family: var(--font-aref), serif;
+  font-size: 1rem;
 }
