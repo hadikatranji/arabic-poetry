@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Amiri, Aref_Ruqaa } from "next/font/google";
 import ThemeProvider from "@/components/ThemeProvider";
 import "./globals.css";
@@ -16,6 +16,15 @@ const arefRuqaa = Aref_Ruqaa({
   variable: "--font-aref",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f7f3ec" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1410" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://shi3r.com"),
@@ -43,12 +52,21 @@ export const metadata: Metadata = {
     "classical Arabic",
     "musajalah",
     "poetry duel",
+    "shi3r",
   ],
   authors: [{ name: "Hadi Katranji" }],
   creator: "Hadi Katranji",
+  alternates: {
+    canonical: "https://shi3r.com",
+    languages: {
+      "ar": "https://shi3r.com",
+      "en": "https://shi3r.com",
+    },
+  },
   openGraph: {
     type: "website",
     locale: "ar_AR",
+    url: "https://shi3r.com",
     title: "مسامرات شعرية — Poetry Nights",
     description:
       "تعلّم الشعر العربي وتحدَّ نفسك في المساجلة الشعرية — تصفّح دواوين 20 شاعراً من الجاهلية إلى العصر الحديث",
@@ -59,6 +77,7 @@ export const metadata: Metadata = {
     title: "مسامرات شعرية — Poetry Nights",
     description:
       "تعلّم الشعر العربي وتحدَّ نفسك في المساجلة الشعرية",
+    creator: "@hadikatranji",
   },
   robots: {
     index: true,
@@ -71,7 +90,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  manifest: "/manifest.json",
   category: "education",
+  other: {
+    "google-site-verification": "",
+  },
 };
 
 export default function RootLayout({

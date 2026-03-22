@@ -58,6 +58,7 @@ export default function Home() {
           <NavCard href="/poets" title="الشعراء" desc="حياتهم وأشعارهم" />
           <NavCard href="/memorize" title="الحفظ" desc="تسميع تفاعلي" />
           <NavCard href="/poems" title="الأبيات" desc="تصفّح وابحث" />
+          <NavCard href="/blog" title="المدوّنة" desc="مقالات عن الشعر" />
         </div>
 
         {/* Ornament */}

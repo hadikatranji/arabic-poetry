@@ -42,7 +42,7 @@ export default function PoetsPage() {
                 href={`/poets/${poet.id}`}
                 className="flex items-start gap-4 p-5 bg-[var(--surface)] rounded-md border border-[var(--border)] hover:border-[var(--accent)] transition-all"
               >
-                <PoetAvatar name={poet.nameAr} era={poet.era} size="md" />
+                <PoetAvatar name={poet.nameAr} era={poet.era} poetId={poet.id} size="md" />
                 <div className="min-w-0">
                   <h3 className="text-lg">{poet.nameAr}</h3>
                   <p className="text-xs text-[var(--muted)] mt-1">{poet.nameEn}</p>

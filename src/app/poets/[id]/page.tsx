@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
 import PoetAvatar from "@/components/PoetAvatar";
+import ShareButtons from "@/components/ShareButtons";
 import { getPoetById, SAMPLE_POETS } from "@/lib/sample-poets";
 import { SAMPLE_VERSES } from "@/lib/sample-verses";
 
@@ -67,7 +68,7 @@ export default function PoetDetailPage({
 
         {/* Poet Header */}
         <div className="flex items-start gap-6 mb-10">
-          <PoetAvatar name={poet.nameAr} era={poet.era} size="lg" />
+          <PoetAvatar name={poet.nameAr} era={poet.era} poetId={poet.id} size="lg" />
           <div>
             <h1 className="text-4xl mb-2">{poet.nameAr}</h1>
             <p className="text-[var(--muted)] text-sm">{poet.nameEn}</p>
@@ -82,6 +83,14 @@ export default function PoetDetailPage({
               )}
             </div>
           </div>
+        </div>
+
+        <div className="mb-6">
+          <ShareButtons
+            url={`https://shi3r.com/poets/${poet.id}`}
+            title={`${poet.nameAr} — مسامرات شعرية`}
+            text={`اقرأ أشعار ${poet.nameAr} في مسامرات شعرية`}
+          />
         </div>
 
         <div className="mb-8">

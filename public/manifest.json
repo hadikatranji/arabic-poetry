@@ -1,0 +1,18 @@
+{
+  "name": "مسامرات شعرية — Poetry Nights",
+  "short_name": "مسامرات",
+  "description": "تعلّم الشعر العربي وتحدَّ نفسك في المساجلة الشعرية",
+  "start_url": "/",
+  "display": "standalone",
+  "dir": "rtl",
+  "lang": "ar",
+  "background_color": "#f7f3ec",
+  "theme_color": "#2c1810",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
