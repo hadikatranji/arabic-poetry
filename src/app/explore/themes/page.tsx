@@ -19,73 +19,91 @@ const THEMES = [
     name: "الغزل",
     nameEn: "Ghazal — Love Poetry",
     icon: "🌹",
+    href: `/poems?theme=${encodeURIComponent("الغزل")}`,
     desc: "شعر الحب والوجد والشوق — من عنترة ومجنون ليلى إلى نزار قباني",
     examples: ["مجنون ليلى", "عنترة بن شداد", "نزار قباني", "المتنبي"],
     color: "var(--accent)",
+    dedicated: false,
   },
   {
     name: "الفخر",
     nameEn: "Fakhr — Boasting & Pride",
     icon: "⚔️",
+    href: `/poems?theme=${encodeURIComponent("الفخر")}`,
     desc: "الفخر بالنفس والقبيلة والشجاعة والكرم",
     examples: ["عنترة بن شداد", "الفرزدق", "جرير", "أبو فراس الحمداني"],
     color: "var(--gold)",
+    dedicated: false,
   },
   {
     name: "الحكمة",
     nameEn: "Hikmah — Wisdom",
     icon: "📜",
+    href: "/explore/themes/hikma",
     desc: "أبيات الحكمة والتأمل في الحياة والإنسان",
     examples: ["زهير بن أبي سلمى", "المتنبي", "أبو العلاء المعري", "إيليا أبو ماضي"],
-    color: "var(--muted)",
+    color: "var(--gold)",
+    dedicated: true,
   },
   {
     name: "الرثاء",
     nameEn: "Ritha' — Elegy",
     icon: "🕊️",
+    href: `/poems?theme=${encodeURIComponent("الرثاء")}`,
     desc: "رثاء الأحبة والأبطال والمدن الضائعة",
     examples: ["أحمد شوقي", "محمود درويش", "جرير", "لبيد بن ربيعة"],
     color: "var(--muted)",
+    dedicated: false,
   },
   {
     name: "الوطنيات",
     nameEn: "Wataniyyat — Patriotic",
     icon: "🌙",
+    href: `/poems?theme=${encodeURIComponent("الوطنيات")}`,
     desc: "شعر الوطن والهوية والانتماء — غرض أدبي يعبّر عن الارتباط بالأرض والذاكرة الجماعية",
     examples: ["أحمد شوقي", "حافظ إبراهيم", "محمود درويش", "نزار قباني"],
     color: "var(--accent)",
+    dedicated: false,
   },
   {
     name: "المدح",
     nameEn: "Madh — Panegyric",
     icon: "👑",
+    href: `/poems?theme=${encodeURIComponent("المدح")}`,
     desc: "مدح الملوك والأمراء والأبطال",
     examples: ["المتنبي", "البحتري", "أبو تمام", "النابغة الذبياني"],
     color: "var(--gold)",
+    dedicated: false,
   },
   {
     name: "الحماسة",
     nameEn: "Hamasa — Heroic Poetry",
     icon: "🗡️",
+    href: `/poems?theme=${encodeURIComponent("الحماسة")}`,
     desc: "شعر الحرب والبطولة والشجاعة في المعارك",
     examples: ["عنترة بن شداد", "أبو فراس الحمداني", "أبو تمام", "طرفة بن العبد"],
     color: "var(--gold)",
+    dedicated: false,
   },
   {
     name: "الوصف",
     nameEn: "Wasf — Descriptive",
     icon: "🌿",
+    href: `/poems?theme=${encodeURIComponent("الوصف")}`,
     desc: "وصف الطبيعة والناقة والخيل والفصول",
     examples: ["امرؤ القيس", "البحتري", "أبو نواس", "زهير بن أبي سلمى"],
     color: "var(--muted)",
+    dedicated: false,
   },
   {
     name: "الزهد والتصوف",
     nameEn: "Zuhd — Ascetic Poetry",
     icon: "🌙",
+    href: `/poems?theme=${encodeURIComponent("الزهد")}`,
     desc: "التأمل في الزوال والفناء والبُعد عن ملذات الدنيا — غرض أدبي فلسفي عميق",
     examples: ["أبو العلاء المعري", "أبو نواس", "لبيد بن ربيعة"],
     color: "var(--muted)",
+    dedicated: false,
   },
 ];
 
@@ -112,16 +130,26 @@ export default function ThemesPage() {
         {THEMES.map((theme) => (
           <Link
             key={theme.name}
-            href={`/poems?theme=${encodeURIComponent(theme.name)}`}
+            href={theme.href}
             className="block p-6 bg-[var(--surface)] border border-[var(--border)] rounded-md hover:border-[var(--accent)] transition-all group"
           >
             <div className="flex items-start justify-between mb-2">
               <h2 className="text-xl group-hover:text-[var(--accent)] transition-colors">
                 {theme.name}
               </h2>
-              <span className="text-xs text-[var(--muted)] mt-1">
-                {theme.nameEn}
-              </span>
+              <div className="flex items-center gap-2">
+                {theme.dedicated && (
+                  <span
+                    className="text-xs px-2 py-0.5 rounded-full border"
+                    style={{ color: "var(--gold)", borderColor: "var(--gold)" }}
+                  >
+                    صفحة مخصصة
+                  </span>
+                )}
+                <span className="text-xs text-[var(--muted)] mt-1">
+                  {theme.nameEn}
+                </span>
+              </div>
             </div>
             <p className="text-sm text-[var(--muted)] mb-3 leading-relaxed">
               {theme.desc}
