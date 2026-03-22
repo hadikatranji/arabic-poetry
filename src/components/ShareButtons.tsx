@@ -6,35 +6,30 @@ const PLATFORMS = [
   {
     name: "𝕏",
     color: "#000000",
-    darkColor: "#ffffff",
     url: (u: string, t: string) =>
       `https://twitter.com/intent/tweet?text=${t}&url=${u}`,
   },
   {
     name: "فيسبوك",
     color: "#1877F2",
-    darkColor: "#4599FF",
     url: (u: string) =>
       `https://www.facebook.com/sharer/sharer.php?u=${u}`,
   },
   {
     name: "واتساب",
     color: "#25D366",
-    darkColor: "#25D366",
-    url: (u: string, t: string) =>
-      `https://wa.me/?text=${t}%20${u}`,
+    url: (u: string, _t: string, wa: string) =>
+      `https://wa.me/?text=${wa}`,
   },
   {
     name: "تلغرام",
     color: "#0088cc",
-    darkColor: "#29B6F6",
     url: (u: string, t: string) =>
       `https://t.me/share/url?url=${u}&text=${t}`,
   },
   {
     name: "لينكدإن",
     color: "#0A66C2",
-    darkColor: "#5BA3E6",
     url: (u: string) =>
       `https://www.linkedin.com/sharing/share-offsite/?url=${u}`,
   },
@@ -44,18 +39,38 @@ export default function ShareButtons({
   url,
   title,
   text,
+  verse,
 }: {
   url: string;
   title: string;
   text?: string;
+  verse?: string;
 }) {
   const [copied, setCopied] = useState(false);
   const encodedUrl = encodeURIComponent(url);
   const encodedText = encodeURIComponent(text || title);
 
+  // WhatsApp gets a beautiful formatted message
+  const whatsappLines = [
+    "٭ *مسامرات شعرية* ٭",
+    "",
+    title,
+  ];
+  if (verse) {
+    whatsappLines.push("", `_${verse}_`);
+  }
+  if (text && text !== title) {
+    whatsappLines.push("", text);
+  }
+  whatsappLines.push("", `shi3r.com`, url);
+  const whatsappText = encodeURIComponent(whatsappLines.join("\n"));
+
   async function handleCopy() {
+    const copyText = verse
+      ? `${title}\n\n${verse}\n\n${url}`
+      : `${title}\n${url}`;
     try {
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(copyText);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -64,12 +79,12 @@ export default function ShareButtons({
   }
 
   return (
-    <div className="flex items-center gap-3 flex-wrap">
-      <span className="text-sm text-[var(--muted)]">شارك</span>
+    <div className="flex items-center gap-2 flex-wrap">
+      <span className="text-sm text-[var(--muted)] ml-1">شارك</span>
       {PLATFORMS.map((p) => (
         <a
           key={p.name}
-          href={p.url(encodedUrl, encodedText)}
+          href={p.url(encodedUrl, encodedText, whatsappText)}
           target="_blank"
           rel="noopener noreferrer"
           className="px-3 py-1.5 rounded-full text-xs font-bold text-white transition-transform hover:scale-110 active:scale-95"
@@ -81,9 +96,13 @@ export default function ShareButtons({
       ))}
       <button
         onClick={handleCopy}
-        className="px-3 py-1.5 rounded-full text-xs border border-[var(--border)] text-[var(--muted)] hover:text-[var(--fg)] hover:border-[var(--accent)] transition-all"
+        className={`px-3 py-1.5 rounded-full text-xs border transition-all ${
+          copied
+            ? "border-green-500 text-green-600 bg-green-50"
+            : "border-[var(--border)] text-[var(--muted)] hover:text-[var(--fg)] hover:border-[var(--accent)]"
+        }`}
       >
-        {copied ? "تم النسخ" : "نسخ الرابط"}
+        {copied ? "تم النسخ ✓" : "نسخ"}
       </button>
     </div>
   );
