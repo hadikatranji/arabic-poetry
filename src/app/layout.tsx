@@ -112,39 +112,16 @@ export default function RootLayout({
           <footer
             dir="rtl"
             style={{
-              borderTop: "1px solid var(--border)",
-              background: "var(--surface)",
-              padding: "1rem 1.5rem",
+              padding: "0.5rem 1rem",
               textAlign: "center",
-              fontSize: "0.8rem",
+              fontSize: "0.65rem",
               color: "var(--muted)",
+              opacity: 0.5,
             }}
           >
-            <nav
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                gap: "1.5rem",
-                flexWrap: "wrap",
-                marginBottom: "0.5rem",
-              }}
-            >
-              <a
-                href="/privacy"
-                style={{ color: "var(--muted)", textDecoration: "none" }}
-              >
-                سياسة الخصوصية
-              </a>
-              <a
-                href="/terms"
-                style={{ color: "var(--muted)", textDecoration: "none" }}
-              >
-                شروط الاستخدام
-              </a>
-            </nav>
-            <p style={{ margin: 0 }}>
-              © {new Date().getFullYear()} مسامرات شعرية — shi3r.com
-            </p>
+            <a href="/privacy" style={{ color: "inherit", textDecoration: "none", marginInlineEnd: "1rem" }}>سياسة الخصوصية</a>
+            <a href="/terms" style={{ color: "inherit", textDecoration: "none" }}>شروط الاستخدام</a>
+            <span style={{ marginInlineStart: "1rem" }}>© {new Date().getFullYear()} shi3r.com</span>
           </footer>
         </ThemeProvider>
       </body>
