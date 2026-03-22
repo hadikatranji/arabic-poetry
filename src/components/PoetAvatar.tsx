@@ -20,6 +20,7 @@ const POET_IMAGES: Record<number, string> = {
 
 const ERA_COLORS: Record<string, { bg: string; fg: string }> = {
   "جاهلي": { bg: "#8b6914", fg: "#f5e6c8" },
+  "إسلامي": { bg: "#4a6741", fg: "#e8f5e2" },
   "أموي": { bg: "#2d6a4f", fg: "#d8f3dc" },
   "عباسي": { bg: "#7b2d26", fg: "#f4d4d0" },
   "حديث": { bg: "#1d3557", fg: "#a8dadc" },

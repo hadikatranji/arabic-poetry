@@ -242,6 +242,43 @@ export const SAMPLE_POETS: Poet[] = [
     biographyAr: "شاعر لبناني مهجري. من أبرز شعراء المهجر. اشتهر بالتفاؤل والتأمل الفلسفي.",
     styleNotes: "التفاؤل والفلسفة والطبيعة",
   },
+
+  // === عصر صدر الإسلام ===
+  {
+    id: 21,
+    nameAr: "الإمام علي بن أبي طالب",
+    nameEn: "Imam Ali ibn Abi Talib",
+    era: "إسلامي",
+    birthYear: 600,
+    deathYear: 661,
+    dateSystem: "gregorian",
+    biographyAr: "أمير المؤمنين علي بن أبي طالب، ابن عم النبي محمد وزوج السيدة فاطمة الزهراء. رابع الخلفاء الراشدين وأحد أبرز فصحاء العرب. جمع علومه في نهج البلاغة، وله ديوان شعر حافل بالحكمة والزهد والفلسفة.",
+    styleNotes: "الحكمة والزهد والموعظة والفلسفة الوجودية",
+  },
+
+  // === العصر العباسي (إضافات) ===
+  {
+    id: 22,
+    nameAr: "الإمام الشافعي",
+    nameEn: "Imam Al-Shafi'i",
+    era: "عباسي",
+    birthYear: 767,
+    deathYear: 820,
+    dateSystem: "gregorian",
+    biographyAr: "محمد بن إدريس الشافعي، إمام فقيه وشاعر حكيم. مؤسس المذهب الشافعي في الفقه الإسلامي. وُلد في غزة ونشأ في مكة، ورحل في طلب العلم. له ديوان شعر عميق في الحكمة والزهد وآداب السلوك.",
+    styleNotes: "الحكمة والزهد وآداب السلوك والموعظة",
+  },
+  {
+    id: 23,
+    nameAr: "البوصيري",
+    nameEn: "Al-Busiri",
+    era: "عباسي",
+    birthYear: 1213,
+    deathYear: 1294,
+    dateSystem: "gregorian",
+    biographyAr: "شرف الدين محمد بن سعيد البوصيري، شاعر مصري من العصر المملوكي. اشتهر بقصيدته البردة الشريفة في مدح النبي محمد ﷺ، وهي من أشهر قصائد العربية على مرّ العصور. قيل إنه رأى النبي في المنام وهو يلقي عليه بردته.",
+    styleNotes: "المدح النبوي والتوسل والغزل الروحاني",
+  },
 ];
 
 export function getPoetById(id: number): Poet | undefined {
@@ -250,9 +287,10 @@ export function getPoetById(id: number): Poet | undefined {
 
 const ERA_ORDER: Record<string, number> = {
   "جاهلي": 1,
-  "أموي": 2,
-  "عباسي": 3,
-  "حديث": 4,
+  "إسلامي": 2,
+  "أموي": 3,
+  "عباسي": 4,
+  "حديث": 5,
 };
 
 export function getPoetsByEra(): Record<string, Poet[]> {
