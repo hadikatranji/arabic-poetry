@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import ShareButtons from "@/components/ShareButtons";
+import Disclaimer from "@/components/Disclaimer";
 import { getMatnBySlug } from "@/lib/mutoon-data";
 
 export default function MatnPage({ params }: { params: { slug: string } }) {
@@ -137,6 +138,8 @@ export default function MatnPage({ params }: { params: { slug: string } }) {
           ابدأ الحفظ
         </Link>
       </div>
+
+      <Disclaimer />
     </main>
   );
 }

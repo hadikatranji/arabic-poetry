@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import Disclaimer from "@/components/Disclaimer";
 import { SAMPLE_VERSES } from "@/lib/sample-verses";
 import { stripDiacritics } from "@/lib/arabic";
 
@@ -223,6 +224,8 @@ export default function MemorizePoemPage({
           التالي
         </button>
       </div>
+
+      <Disclaimer />
     </main>
   );
 }

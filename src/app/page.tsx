@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import Disclaimer from "@/components/Disclaimer";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -74,6 +75,10 @@ export default function Home() {
             وتأتي على قدر الكرام المكارمُ
           </p>
           <p className="text-[var(--muted)] text-xs mt-4">— المتنبي</p>
+        </div>
+
+        <div className="w-full max-w-md mt-8">
+          <Disclaimer />
         </div>
       </main>
     </>

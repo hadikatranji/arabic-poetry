@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import Disclaimer from "@/components/Disclaimer";
 
 interface Turn {
   type: "user" | "app" | "system";
@@ -147,6 +148,9 @@ export default function MusajalahPage() {
             </form>
           )}
         </div>
+      </div>
+      <div className="max-w-2xl w-full mx-auto px-6 pb-4">
+        <Disclaimer />
       </div>
     </div>
   );

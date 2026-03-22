@@ -3,6 +3,7 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import ShareButtons from "./ShareButtons";
+import Disclaimer from "./Disclaimer";
 import { BLOG_POSTS, BlogPost as BlogPostType } from "@/lib/blog-data";
 
 export default function BlogPostLayout({
@@ -150,6 +151,8 @@ export default function BlogPostLayout({
           ابدأ المساجلة
         </Link>
       </div>
+
+      <Disclaimer />
     </main>
   );
 }

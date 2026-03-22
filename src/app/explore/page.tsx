@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import ThemeToggle from "@/components/ThemeToggle";
+import Disclaimer from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "استكشف الشعر العربي",
@@ -53,6 +54,8 @@ export default function ExplorePage() {
           </Link>
         ))}
       </div>
+
+      <Disclaimer />
     </main>
   );
 }

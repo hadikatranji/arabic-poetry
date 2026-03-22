@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import Disclaimer from "@/components/Disclaimer";
 import { SAMPLE_VERSES } from "@/lib/sample-verses";
 
 export default function PoemsPage() {
@@ -78,6 +79,8 @@ export default function PoemsPage() {
       <p className="text-center text-[var(--muted)] text-xs mt-8">
         {filtered.length} بيت
       </p>
+
+      <Disclaimer />
     </main>
   );
 }

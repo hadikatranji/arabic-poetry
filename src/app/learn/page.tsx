@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import ThemeToggle from "@/components/ThemeToggle";
+import Disclaimer from "@/components/Disclaimer";
 import { MUTOON } from "@/lib/mutoon-data";
 
 export const metadata: Metadata = {
@@ -61,6 +62,8 @@ export default function LearnPage() {
           ))}
         </div>
       </section>
+
+      <Disclaimer />
     </main>
   );
 }

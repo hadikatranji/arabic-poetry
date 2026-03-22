@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
 import PoetAvatar from "@/components/PoetAvatar";
 import ShareButtons from "@/components/ShareButtons";
+import Disclaimer from "@/components/Disclaimer";
 import { getPoetById, SAMPLE_POETS } from "@/lib/sample-poets";
 import { SAMPLE_VERSES } from "@/lib/sample-verses";
 
@@ -127,6 +128,8 @@ export default function PoetDetailPage({
             </div>
           </div>
         )}
+
+        <Disclaimer />
       </main>
     </>
   );

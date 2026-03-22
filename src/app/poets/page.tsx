@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ThemeToggle from "@/components/ThemeToggle";
 import PoetAvatar from "@/components/PoetAvatar";
+import Disclaimer from "@/components/Disclaimer";
 import { getPoetsByEra } from "@/lib/sample-poets";
 
 export const metadata: Metadata = {
@@ -55,6 +56,8 @@ export default function PoetsPage() {
           </div>
         </section>
       ))}
+
+      <Disclaimer />
     </main>
   );
 }

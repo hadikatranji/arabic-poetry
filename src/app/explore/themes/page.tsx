@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import ThemeToggle from "@/components/ThemeToggle";
+import Disclaimer from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "الأغراض الشعرية",
@@ -50,7 +51,7 @@ const THEMES = [
     name: "الوطنيات",
     nameEn: "Wataniyyat — Patriotic",
     icon: "🌙",
-    desc: "شعر الوطن والهوية والمقاومة والانتماء",
+    desc: "شعر الوطن والهوية والانتماء — غرض أدبي يعبّر عن الارتباط بالأرض والذاكرة الجماعية",
     examples: ["أحمد شوقي", "حافظ إبراهيم", "محمود درويش", "نزار قباني"],
     color: "var(--accent)",
   },
@@ -82,7 +83,7 @@ const THEMES = [
     name: "الزهد والتصوف",
     nameEn: "Zuhd — Ascetic Poetry",
     icon: "🌙",
-    desc: "التأمل في الزوال والبعد عن الدنيا والتقرب إلى الله",
+    desc: "التأمل في الزوال والفناء والبُعد عن ملذات الدنيا — غرض أدبي فلسفي عميق",
     examples: ["أبو العلاء المعري", "أبو نواس", "لبيد بن ربيعة"],
     color: "var(--muted)",
   },
@@ -147,6 +148,8 @@ export default function ThemesPage() {
           تصفّح الشعراء ←
         </Link>
       </div>
+
+      <Disclaimer />
     </main>
   );
 }

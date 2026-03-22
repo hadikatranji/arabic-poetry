@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import Disclaimer from "@/components/Disclaimer";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
 export default function BlogPage() {
@@ -43,6 +44,8 @@ export default function BlogPage() {
           </article>
         ))}
       </div>
+
+      <Disclaimer />
     </main>
   );
 }

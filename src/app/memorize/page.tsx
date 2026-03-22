@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import Disclaimer from "@/components/Disclaimer";
 import { SAMPLE_VERSES } from "@/lib/sample-verses";
 
 export default function MemorizePage() {
@@ -45,6 +46,8 @@ export default function MemorizePage() {
           </Link>
         ))}
       </div>
+
+      <Disclaimer />
     </main>
   );
 }
