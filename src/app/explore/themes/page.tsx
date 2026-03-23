@@ -19,11 +19,11 @@ const THEMES = [
     name: "الغزل",
     nameEn: "Ghazal — Love Poetry",
     icon: "🌹",
-    href: `/poems?theme=${encodeURIComponent("الغزل")}`,
+    href: "/explore/themes/ghazal",
     desc: "شعر الحب والوجد والشوق — من عنترة ومجنون ليلى إلى نزار قباني",
     examples: ["مجنون ليلى", "عنترة بن شداد", "نزار قباني", "المتنبي"],
     color: "var(--accent)",
-    dedicated: false,
+    dedicated: true,
   },
   {
     name: "الفخر",
