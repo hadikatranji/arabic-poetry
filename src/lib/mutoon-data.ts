@@ -24,6 +24,7 @@ export interface Matn {
   verseCount: number;
   description: string;
   youtubeSearch?: string;
+  youtubeId?: string;
   chapters: MatnChapter[];
 }
 
