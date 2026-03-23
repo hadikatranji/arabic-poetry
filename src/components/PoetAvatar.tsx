@@ -23,6 +23,7 @@ const ERA_COLORS: Record<string, { bg: string; fg: string }> = {
   "إسلامي": { bg: "#4a6741", fg: "#e8f5e2" },
   "أموي": { bg: "#2d6a4f", fg: "#d8f3dc" },
   "عباسي": { bg: "#7b2d26", fg: "#f4d4d0" },
+  "أندلسي": { bg: "#5c3d7a", fg: "#e8d5f5" },
   "حديث": { bg: "#1d3557", fg: "#a8dadc" },
 };
 
