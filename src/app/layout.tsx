@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Amiri, Aref_Ruqaa } from "next/font/google";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const amiri = Amiri({
@@ -108,6 +109,7 @@ export default function RootLayout({
         className={`${amiri.variable} ${arefRuqaa.variable} font-aref antialiased`}
       >
         <ThemeProvider>
+          <Analytics />
           {children}
           <footer
             dir="rtl"
