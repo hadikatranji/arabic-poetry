@@ -347,15 +347,23 @@ export default function MatnPage({ params }: { params: { slug: string } }) {
                   )}
                 </div>
                 <div className="flex items-center gap-3">
-                  <button
+                  <span
+                    role="button"
+                    tabIndex={0}
                     onClick={(e) => {
                       e.stopPropagation();
                       enterMode("reader", ci);
                     }}
-                    className="text-xs text-[var(--accent)] border border-[var(--border)] px-2 py-0.5 rounded hover:border-[var(--accent)] transition-colors"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.stopPropagation();
+                        enterMode("reader", ci);
+                      }
+                    }}
+                    className="text-xs text-[var(--accent)] border border-[var(--border)] px-2 py-0.5 rounded hover:border-[var(--accent)] transition-colors cursor-pointer"
                   >
                     اقرأ
-                  </button>
+                  </span>
                   <span className="text-xs text-[var(--muted)]">
                     {chapter.verses.length} بيت
                   </span>
