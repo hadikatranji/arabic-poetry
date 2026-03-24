@@ -89,6 +89,16 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 دقائق",
     tags: ["لغة", "حب", "ثقافة"],
   },
+  {
+    slug: "shir-an-al-omm",
+    title: "شعر عن الأم — أجمل ما قيل في حقّ الأمهات",
+    titleEn: "Arabic Poetry About Mothers — The Most Beautiful Verses",
+    description:
+      "أجمل أبيات الشعر العربي عن الأم عبر العصور: من حافظ إبراهيم إلى محمود درويش والخنساء. كيف رسم الشعراء العرب صورة الأم في أعمق قصائدهم؟",
+    date: "2026-03-24",
+    readTime: "6 دقائق",
+    tags: ["أم", "رثاء", "حديث", "شعر"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
