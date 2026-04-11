@@ -90,6 +90,16 @@ export const BLOG_POSTS: BlogPost[] = [
     tags: ["لغة", "حب", "ثقافة"],
   },
   {
+    slug: "shir-an-al-watan",
+    title: "شعر عن الوطن — أجمل ما قيل في حبّ الأوطان",
+    titleEn: "Arabic Poetry About the Homeland — The Most Beautiful Patriotic Verses",
+    description:
+      "أجمل أبيات الشعر العربي عن الوطن عبر العصور: من إبراهيم طوقان وقصيدة 'موطني' إلى أحمد شوقي ومحمود درويش. كيف رسم الشعراء العرب حبّ الوطن في أعمق قصائدهم؟",
+    date: "2026-04-11",
+    readTime: "7 دقائق",
+    tags: ["وطن", "وطنيات", "حديث", "شعر"],
+  },
+  {
     slug: "shir-an-al-omm",
     title: "شعر عن الأم — أجمل ما قيل في حقّ الأمهات",
     titleEn: "Arabic Poetry About Mothers — The Most Beautiful Verses",
