@@ -109,6 +109,17 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 دقائق",
     tags: ["أم", "رثاء", "حديث", "شعر"],
   },
+  {
+    slug: "shir-hazin",
+    title: "شعر حزين — أجمل أبيات الحزن والألم في الشعر العربي",
+    titleEn:
+      "Sad Arabic Poetry — The Most Beautiful Verses of Grief and Sorrow",
+    description:
+      "أجمل أبيات الشعر الحزين في تاريخ الأدب العربي: من الخنساء وأبي العلاء المعري إلى بدر شاكر السياب. كيف حوّل الشعراء العرب الحزن إلى فن خالد؟",
+    date: "2026-04-12",
+    readTime: "7 دقائق",
+    tags: ["حزن", "رثاء", "فلسفة", "شعر"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
