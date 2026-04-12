@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Disclaimer from "@/components/Disclaimer";
+import ThemeToggle from "@/components/ThemeToggle";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "شروط الاستخدام",
@@ -28,6 +30,12 @@ export default function TermsPage() {
           margin: "0 auto",
         }}
       >
+        {/* Nav */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
+          <Link href="/" style={{ color: "var(--muted)", fontSize: "0.9rem", textDecoration: "none" }}>← العودة</Link>
+          <ThemeToggle />
+        </div>
+
         {/* Header */}
         <header style={{ marginBottom: "2.5rem", textAlign: "center" }}>
           <h1
