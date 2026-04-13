@@ -56,6 +56,16 @@ const THEMES = [
     dedicated: true,
   },
   {
+    name: "شعر الأم",
+    nameEn: "Poetry of Motherhood",
+    icon: "🤍",
+    href: "/explore/themes/om",
+    desc: "أجمل ما قاله الشعراء العرب في الأم — من حافظ إبراهيم 'الأم مدرسة' إلى درويش 'أحنّ إلى خبز أمي'",
+    examples: ["حافظ إبراهيم", "محمود درويش", "نزار قباني", "أحمد شوقي"],
+    color: "#60a5fa",
+    dedicated: true,
+  },
+  {
     name: "الوطنيات",
     nameEn: "Wataniyyat — Patriotic",
     icon: "🌙",
