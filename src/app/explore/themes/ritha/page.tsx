@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ThemeToggle from "@/components/ThemeToggle";
 import ShareButtons from "@/components/ShareButtons";
+import Disclaimer from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "شعر الرثاء — أجمل قصائد الحزن والفقد في الأدب العربي",
@@ -221,6 +222,8 @@ export default function RithaThemePage() {
           تصفّح كل الأبيات ←
         </Link>
       </div>
+
+      <Disclaimer />
 
       {/* JSON-LD */}
       <script

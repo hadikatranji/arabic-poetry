@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ThemeToggle from "@/components/ThemeToggle";
 import ShareButtons from "@/components/ShareButtons";
+import Disclaimer from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "شعر عن الأم — أجمل أبيات الحب والعرفان للأمهات",
@@ -198,6 +199,8 @@ export default function OmThemePage() {
           شعر الرثاء ←
         </Link>
       </div>
+
+      <Disclaimer />
 
       {/* JSON-LD */}
       <script

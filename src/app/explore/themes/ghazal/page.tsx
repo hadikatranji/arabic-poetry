@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ThemeToggle from "@/components/ThemeToggle";
 import ShareButtons from "@/components/ShareButtons";
+import Disclaimer from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "شعر الغزل — أجمل أبيات الحب في الشعر العربي",
@@ -267,6 +268,8 @@ export default function GhazalThemePage() {
       </div>
 
       {/* JSON-LD */}
+      <Disclaimer />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ThemeToggle from "@/components/ThemeToggle";
 import ShareButtons from "@/components/ShareButtons";
+import Disclaimer from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "الشعر الأندلسي — روائع شعراء الأندلس",
@@ -232,6 +233,8 @@ export default function AndalusiThemePage() {
           صفحة ابن زيدون ←
         </Link>
       </div>
+
+      <Disclaimer />
 
       {/* JSON-LD */}
       <script
