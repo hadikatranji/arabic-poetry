@@ -110,6 +110,16 @@ export const BLOG_POSTS: BlogPost[] = [
     tags: ["أم", "رثاء", "حديث", "شعر"],
   },
   {
+    slug: "ashaar-al-imam-ali",
+    title: "أشعار الإمام علي — الحكمة والبلاغة في كلماته الخالدة",
+    titleEn: "Imam Ali Poetry — Wisdom and Eloquence in His Timeless Words",
+    description:
+      "أجمل أشعار الإمام علي بن أبي طالب وحِكَمه الخالدة: من قصيدة 'دواؤك فيك' إلى حِكَم نهج البلاغة. تعرّف على الإمام علي شاعراً وفيلسوفاً وأميراً للبيان.",
+    date: "2026-04-14",
+    readTime: "7 دقائق",
+    tags: ["الإمام علي", "حكمة", "نهج البلاغة", "شعر"],
+  },
+  {
     slug: "shir-hazin",
     title: "شعر حزين — أجمل أبيات الحزن والألم في الشعر العربي",
     titleEn:
