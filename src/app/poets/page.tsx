@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "الشعراء",
   description:
     "تصفّح سيرة أعظم شعراء العربية من الجاهلية إلى العصر الحديث — 20 شاعراً مع أشعارهم",
+  openGraph: {
+    title: "الشعراء | مسامرات شعرية",
+    description: "تصفّح سيرة أعظم شعراء العربية من الجاهلية إلى العصر الحديث",
+  },
 };
 
 const ERA_LABELS: Record<string, string> = {
