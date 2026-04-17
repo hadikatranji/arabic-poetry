@@ -130,6 +130,16 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 دقائق",
     tags: ["حزن", "رثاء", "فلسفة", "شعر"],
   },
+  {
+    slug: "al-burdah-al-busiri",
+    title: "البردة — قصيدة البوصيري الخالدة في مدح النبي ﷺ",
+    titleEn: "Al-Burdah — Al-Busiri's Timeless Ode in Praise of the Prophet",
+    description:
+      "تعرّف على قصيدة البردة الشريفة: تاريخ نظمها وقصة البوصيري مع الشلل والشفاء، وأشهر أبياتها كـ«النفس كالطفل»، وأثرها العميق في الحضارة الإسلامية عبر سبعة قرون.",
+    date: "2026-04-17",
+    readTime: "8 دقائق",
+    tags: ["البردة", "البوصيري", "مديح نبوي", "كلاسيكي"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
