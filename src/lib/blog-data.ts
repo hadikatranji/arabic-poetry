@@ -120,6 +120,16 @@ export const BLOG_POSTS: BlogPost[] = [
     tags: ["الإمام علي", "حكمة", "نهج البلاغة", "شعر"],
   },
   {
+    slug: "al-burda-al-shareefa",
+    title: "البردة الشريفة — أشهر قصيدة مدح في تاريخ الإسلام",
+    titleEn: "Al-Burda al-Shareefa — The Most Famous Poem of Praise in Islamic History",
+    description:
+      "البردة الشريفة للبوصيري: قصة الشاعر المشلول والرؤيا النبوية، وأشهر أبيات القصيدة التي حفظها الملايين من المغرب إلى إندونيسيا.",
+    date: "2026-04-18",
+    readTime: "8 دقائق",
+    tags: ["البردة", "البوصيري", "مدح", "شعر ديني", "نبوي"],
+  },
+  {
     slug: "shir-hazin",
     title: "شعر حزين — أجمل أبيات الحزن والألم في الشعر العربي",
     titleEn:
