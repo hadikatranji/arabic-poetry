@@ -281,7 +281,7 @@ export default function MatnPageClient({ matn }: { matn: Matn }) {
 
       <div className="mb-6">
         <ShareButtons
-          url={`https://shi3r.com/mutoon/${matn.slug}`}
+          url={`https://www.shi3r.com/mutoon/${matn.slug}`}
           title={`${matn.title} — مسامرات شعرية`}
           text={`تعلّم واحفظ ${matn.title} — ${matn.verseCount} بيت مع الشرح`}
         />

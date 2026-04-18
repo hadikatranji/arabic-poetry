@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "أجمل أبيات الرثاء في الشعر العربي — من الخنساء وأبو تمام وأحمد شوقي وابن الرومي. قصائد الحزن والفقد عبر العصور.",
   },
   alternates: {
-    canonical: "https://shi3r.com/explore/themes/ritha",
+    canonical: "https://www.shi3r.com/explore/themes/ritha",
   },
 };
 
@@ -201,7 +201,7 @@ export default function RithaThemePage() {
       {/* Share */}
       <div className="mt-10">
         <ShareButtons
-          url="https://shi3r.com/explore/themes/ritha"
+          url="https://www.shi3r.com/explore/themes/ritha"
           title="شعر الرثاء — أجمل قصائد الحزن والفقد في الشعر العربي"
           text="أجمل أبيات الرثاء في الشعر العربي — من الخنساء وأبو تمام وأحمد شوقي"
         />
@@ -235,7 +235,7 @@ export default function RithaThemePage() {
             name: "شعر الرثاء — أجمل قصائد الحزن والفقد في الأدب العربي",
             description:
               "أجمل أبيات الرثاء في الشعر العربي من الخنساء وأبو ذؤيب الهذلي وأبو تمام وأحمد شوقي وابن الرومي",
-            url: "https://shi3r.com/explore/themes/ritha",
+            url: "https://www.shi3r.com/explore/themes/ritha",
             inLanguage: "ar",
             keywords:
               "شعر الرثاء, قصائد الرثاء, رثاء عربي, الخنساء, أبو تمام, أحمد شوقي",

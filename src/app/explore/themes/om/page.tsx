@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "أجمل ما قاله الشعراء العرب في الأم — من حافظ إبراهيم ومحمود درويش ونزار قباني.",
   },
   alternates: {
-    canonical: "https://shi3r.com/explore/themes/om",
+    canonical: "https://www.shi3r.com/explore/themes/om",
   },
 };
 
@@ -178,7 +178,7 @@ export default function OmThemePage() {
       {/* Share */}
       <div className="mt-10">
         <ShareButtons
-          url="https://shi3r.com/explore/themes/om"
+          url="https://www.shi3r.com/explore/themes/om"
           title="شعر عن الأم — أجمل أبيات الحب والعرفان للأمهات"
           text="أجمل ما قاله الشعراء العرب في الأم — من حافظ إبراهيم ومحمود درويش ونزار قباني"
         />
@@ -212,7 +212,7 @@ export default function OmThemePage() {
             name: "شعر عن الأم — أجمل أبيات الحب والعرفان للأمهات",
             description:
               "أجمل ما قاله الشعراء العرب في الأم من حافظ إبراهيم ومحمود درويش ونزار قباني وأحمد شوقي",
-            url: "https://shi3r.com/explore/themes/om",
+            url: "https://www.shi3r.com/explore/themes/om",
             inLanguage: "ar",
             hasPart: OM_VERSES.map((v) => ({
               "@type": "CreativeWork",

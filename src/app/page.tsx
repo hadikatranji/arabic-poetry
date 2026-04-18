@@ -11,7 +11,7 @@ const jsonLd = {
   applicationCategory: "EducationalApplication",
   operatingSystem: "Web",
   inLanguage: "ar",
-  url: "https://shi3r.com",
+  url: "https://www.shi3r.com",
   author: { "@type": "Person", name: "Hadi Katranji" },
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };

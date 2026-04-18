@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "أجمل أبيات الحكمة والفلسفة في الشعر العربي — من المتنبي وزهير بن أبي سلمى وأبي العلاء المعري وإيليا أبو ماضي.",
   },
   alternates: {
-    canonical: "https://shi3r.com/explore/themes/hikma",
+    canonical: "https://www.shi3r.com/explore/themes/hikma",
   },
 };
 
@@ -244,7 +244,7 @@ export default function HikmaThemePage() {
       {/* Share */}
       <div className="mt-10">
         <ShareButtons
-          url="https://shi3r.com/explore/themes/hikma"
+          url="https://www.shi3r.com/explore/themes/hikma"
           title="أبيات الحكمة في الشعر العربي"
           text="أجمل أبيات الحكمة في الشعر العربي — من المتنبي وزهير وأبي العلاء المعري"
         />
@@ -278,7 +278,7 @@ export default function HikmaThemePage() {
             name: "أبيات الحكمة في الشعر العربي",
             description:
               "أجمل أبيات الحكمة والفلسفة في الشعر العربي من كبار الشعراء",
-            url: "https://shi3r.com/explore/themes/hikma",
+            url: "https://www.shi3r.com/explore/themes/hikma",
             inLanguage: "ar",
             hasPart: HIKMA_VERSES.map((v) => ({
               "@type": "CreativeWork",

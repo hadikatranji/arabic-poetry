@@ -67,7 +67,7 @@ export default function BlogPostLayout({
         {/* Share — top */}
         <div className="mb-8 pb-6 border-b border-[var(--border)]">
           <ShareButtons
-            url={`https://shi3r.com/blog/posts/${post.slug}`}
+            url={`https://www.shi3r.com/blog/posts/${post.slug}`}
             title={post.title}
             text={post.description}
           />
@@ -101,7 +101,7 @@ export default function BlogPostLayout({
         <div className="mt-10 pt-6 border-t border-[var(--border)]">
           <p className="text-[var(--muted)] mb-3">أعجبك المقال؟ شاركه مع أصدقائك</p>
           <ShareButtons
-            url={`https://shi3r.com/blog/posts/${post.slug}`}
+            url={`https://www.shi3r.com/blog/posts/${post.slug}`}
             title={post.title}
             text={post.description}
           />

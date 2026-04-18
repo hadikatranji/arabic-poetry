@@ -27,7 +27,7 @@ const jsonLd = {
   publisher: {
     "@type": "Organization",
     name: "مسامرات شعرية",
-    url: "https://shi3r.com",
+    url: "https://www.shi3r.com",
   },
   inLanguage: "ar",
 };

@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://shi3r.com/sitemap.xml",
+    sitemap: "https://www.shi3r.com/sitemap.xml",
   };
 }

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "أجمل أبيات الزهد في الشعر العربي — من أبي العتاهية والإمام الشافعي والإمام علي بن أبي طالب.",
   },
   alternates: {
-    canonical: "https://shi3r.com/explore/themes/zuhd",
+    canonical: "https://www.shi3r.com/explore/themes/zuhd",
   },
 };
 
@@ -247,7 +247,7 @@ export default function ZuhdThemePage() {
       {/* Share */}
       <div className="mt-10">
         <ShareButtons
-          url="https://shi3r.com/explore/themes/zuhd"
+          url="https://www.shi3r.com/explore/themes/zuhd"
           title="شعر الزهد — أجمل أبيات الزهد في الشعر العربي"
           text="أجمل أبيات الزهد في الشعر العربي — من أبي العتاهية والإمام الشافعي والإمام علي"
         />
@@ -281,7 +281,7 @@ export default function ZuhdThemePage() {
             name: "شعر الزهد — أجمل أبيات الزهد في الشعر العربي",
             description:
               "أجمل أبيات الزهد في الشعر العربي من أبي العتاهية والإمام الشافعي والإمام علي",
-            url: "https://shi3r.com/explore/themes/zuhd",
+            url: "https://www.shi3r.com/explore/themes/zuhd",
             inLanguage: "ar",
             hasPart: ZUHD_VERSES.map((v) => ({
               "@type": "CreativeWork",

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "أجمل أبيات الشعر الوطني العربي — من الشابي وشوقي وحافظ إبراهيم إلى محمود درويش.",
   },
   alternates: {
-    canonical: "https://shi3r.com/explore/themes/wataniyyat",
+    canonical: "https://www.shi3r.com/explore/themes/wataniyyat",
   },
 };
 
@@ -202,7 +202,7 @@ export default function WataniyyatThemePage() {
       {/* Share */}
       <div className="mt-10">
         <ShareButtons
-          url="https://shi3r.com/explore/themes/wataniyyat"
+          url="https://www.shi3r.com/explore/themes/wataniyyat"
           title="شعر الوطنيات — أجمل القصائد الوطنية في الشعر العربي"
           text="أجمل أبيات الشعر الوطني العربي — من الشابي وشوقي وحافظ إبراهيم إلى محمود درويش"
         />
@@ -236,7 +236,7 @@ export default function WataniyyatThemePage() {
             name: "شعر الوطنيات — أجمل القصائد الوطنية في الشعر العربي",
             description:
               "أجمل أبيات الشعر الوطني العربي من أبو القاسم الشابي وأحمد شوقي وحافظ إبراهيم ومحمود درويش",
-            url: "https://shi3r.com/explore/themes/wataniyyat",
+            url: "https://www.shi3r.com/explore/themes/wataniyyat",
             inLanguage: "ar",
             hasPart: WATANIYYAT_VERSES.map((v) => ({
               "@type": "CreativeWork",

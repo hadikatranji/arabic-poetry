@@ -88,7 +88,7 @@ export default function PoetDetailPage({
 
         <div className="mb-6">
           <ShareButtons
-            url={`https://shi3r.com/poets/${poet.id}`}
+            url={`https://www.shi3r.com/poets/${poet.id}`}
             title={poet.nameAr}
             text={`اقرأ أشعار ${poet.nameAr}`}
             verse={poetVerses[0] ? `${poetVerses[0].firstHemistich} ✶ ${poetVerses[0].secondHemistich}` : undefined}

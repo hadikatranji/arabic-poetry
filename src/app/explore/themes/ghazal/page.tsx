@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "أجمل أبيات الغزل والحب في الشعر العربي — من امرؤ القيس ومجنون ليلى وجرير إلى نزار قباني.",
   },
   alternates: {
-    canonical: "https://shi3r.com/explore/themes/ghazal",
+    canonical: "https://www.shi3r.com/explore/themes/ghazal",
   },
 };
 
@@ -245,7 +245,7 @@ export default function GhazalThemePage() {
       {/* Share */}
       <div className="mt-10">
         <ShareButtons
-          url="https://shi3r.com/explore/themes/ghazal"
+          url="https://www.shi3r.com/explore/themes/ghazal"
           title="شعر الغزل — أجمل أبيات الحب في الشعر العربي"
           text="أجمل أبيات الغزل والحب في الشعر العربي — من امرؤ القيس ومجنون ليلى إلى نزار قباني"
         />
@@ -279,7 +279,7 @@ export default function GhazalThemePage() {
             name: "شعر الغزل — أجمل أبيات الحب في الشعر العربي",
             description:
               "أجمل أبيات الغزل والحب في الشعر العربي من امرؤ القيس ومجنون ليلى وعنترة وجرير ونزار قباني",
-            url: "https://shi3r.com/explore/themes/ghazal",
+            url: "https://www.shi3r.com/explore/themes/ghazal",
             inLanguage: "ar",
             hasPart: GHAZAL_VERSES.map((v) => ({
               "@type": "CreativeWork",

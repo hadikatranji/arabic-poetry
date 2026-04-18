@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "روائع الشعر الأندلسي — من ابن زيدون وابن حزم وابن خفاجة. جنّة الشعر في قرطبة وغرناطة وإشبيلية.",
   },
   alternates: {
-    canonical: "https://shi3r.com/explore/themes/andalusi",
+    canonical: "https://www.shi3r.com/explore/themes/andalusi",
   },
 };
 
@@ -212,7 +212,7 @@ export default function AndalusiThemePage() {
       {/* Share */}
       <div className="mt-10">
         <ShareButtons
-          url="https://shi3r.com/explore/themes/andalusi"
+          url="https://www.shi3r.com/explore/themes/andalusi"
           title="الشعر الأندلسي — روائع شعراء الأندلس"
           text="روائع الشعر الأندلسي — من ابن زيدون وابن حزم وابن خفاجة"
         />
@@ -246,7 +246,7 @@ export default function AndalusiThemePage() {
             name: "الشعر الأندلسي — روائع شعراء الأندلس",
             description:
               "روائع الشعر الأندلسي من ابن زيدون وابن حزم وابن خفاجة",
-            url: "https://shi3r.com/explore/themes/andalusi",
+            url: "https://www.shi3r.com/explore/themes/andalusi",
             inLanguage: "ar",
             hasPart: ANDALUSI_VERSES.map((v) => ({
               "@type": "CreativeWork",

@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shi3r.com"),
+  metadataBase: new URL("https://www.shi3r.com"),
   title: {
     default: "مسامرات شعرية — Poetry Nights",
     template: "%s | مسامرات شعرية",
@@ -58,16 +58,16 @@ export const metadata: Metadata = {
   authors: [{ name: "Hadi Katranji" }],
   creator: "Hadi Katranji",
   alternates: {
-    canonical: "https://shi3r.com",
+    canonical: "https://www.shi3r.com",
     languages: {
-      "ar": "https://shi3r.com",
-      "en": "https://shi3r.com",
+      "ar": "https://www.shi3r.com",
+      "en": "https://www.shi3r.com",
     },
   },
   openGraph: {
     type: "website",
     locale: "ar_AR",
-    url: "https://shi3r.com",
+    url: "https://www.shi3r.com",
     title: "مسامرات شعرية — Poetry Nights",
     description:
       "تعلّم الشعر العربي وتحدَّ نفسك في المساجلة الشعرية — تصفّح دواوين 20 شاعراً من الجاهلية إلى العصر الحديث",

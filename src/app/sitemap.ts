@@ -4,7 +4,7 @@ import { BLOG_POSTS } from "@/lib/blog-data";
 import { MUTOON } from "@/lib/mutoon-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://shi3r.com";
+  const baseUrl = "https://www.shi3r.com";
 
   const poetPages = SAMPLE_POETS.map((poet) => ({
     url: `${baseUrl}/poets/${poet.id}`,
