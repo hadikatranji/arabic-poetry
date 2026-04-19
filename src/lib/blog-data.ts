@@ -140,6 +140,16 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 دقائق",
     tags: ["حزن", "رثاء", "فلسفة", "شعر"],
   },
+  {
+    slug: "abiat-shir-qasira",
+    title: "أبيات شعر قصيرة — أجمل ما حُفظ من الشعر العربي",
+    titleEn: "Short Arabic Poetry Verses — The Most Memorable Lines",
+    description:
+      "أجمل أبيات الشعر العربي القصيرة المعبّرة: حكمة المتنبي والشافعي، وغزل ابن زيدون، ووطنيات إبراهيم طوقان، وفخر أبي تمام — أبيات في بيتين تكفي عن ديوان.",
+    date: "2026-04-19",
+    readTime: "6 دقائق",
+    tags: ["أبيات", "قصيرة", "حكمة", "غزل", "شعر"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
