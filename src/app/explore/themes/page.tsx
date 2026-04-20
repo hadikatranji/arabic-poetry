@@ -29,11 +29,11 @@ const THEMES = [
     name: "الفخر",
     nameEn: "Fakhr — Boasting & Pride",
     icon: "⚔️",
-    href: `/poems?theme=${encodeURIComponent("الفخر")}`,
+    href: "/explore/themes/fakhr",
     desc: "الفخر بالنفس والقبيلة والشجاعة والكرم",
     examples: ["عنترة بن شداد", "الفرزدق", "جرير", "أبو فراس الحمداني"],
     color: "var(--gold)",
-    dedicated: false,
+    dedicated: true,
   },
   {
     name: "الحكمة",
