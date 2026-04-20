@@ -2,10 +2,11 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000
+      "name": "arabic-poetry",
+      "runtimeExecutable": "/opt/homebrew/bin/node",
+      "runtimeArgs": ["/Users/hadikatranji/Projects/arabic-poetry/node_modules/.bin/next", "dev", "--cwd", "/Users/hadikatranji/Projects/arabic-poetry"],
+      "port": 3000,
+      "autoPort": true
     }
   ]
 }

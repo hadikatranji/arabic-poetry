@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(git:*)",
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "Bash(python3:*)",
+      "Bash(cd:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm:*)",
+      "Bash(echo:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(file:*)",
+      "Bash(dig:*)",
+      "Bash(lsof:*)",
+      "Bash(kill:*)",
+      "Bash(which:*)",
+      "Bash(brew:*)",
+      "Bash(sendmail:*)",
+      "Bash(/opt/homebrew/bin/gh:*)",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep"
+    ],
+    "additionalDirectories": [
+      "/Users/hadikatranji/Projects/arabic-poetry"
+    ]
+  }
+}
