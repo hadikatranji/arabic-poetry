@@ -150,6 +150,16 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 دقائق",
     tags: ["أبيات", "قصيرة", "حكمة", "غزل", "شعر"],
   },
+  {
+    slug: "shir-al-ghurba",
+    title: "شعر الغربة والحنين — أجمل ما قيل في الاشتياق والبُعد",
+    titleEn: "Arabic Poetry About Exile and Longing — The Most Beautiful Verses",
+    description:
+      "أجمل أبيات شعر الغربة والحنين في تاريخ الأدب العربي: من مالك بن الريب يرثي نفسه في خراسان، إلى الشافعي وحكمة السفر، وأبي فراس في الأسر، وأحمد شوقي المنفيّ في الأندلس.",
+    date: "2026-04-21",
+    readTime: "7 دقائق",
+    tags: ["غربة", "حنين", "اشتياق", "شعر", "سفر"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
