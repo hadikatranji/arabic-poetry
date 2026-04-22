@@ -150,6 +150,16 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 دقائق",
     tags: ["أبيات", "قصيرة", "حكمة", "غزل", "شعر"],
   },
+  {
+    slug: "shir-al-firaq",
+    title: "شعر الفراق — أجمل ما قيل في الوداع والشوق",
+    titleEn: "Arabic Poetry of Farewell — The Most Beautiful Verses on Parting and Longing",
+    description:
+      "أجمل أبيات شعر الفراق في تاريخ الأدب العربي: من المتنبي وأبي فراس الحمداني إلى ابن زيدون ومحمود درويش ونزار قباني. كيف حوّل الشعراء العرب ألم الوداع إلى فن خالد؟",
+    date: "2026-04-22",
+    readTime: "7 دقائق",
+    tags: ["فراق", "وداع", "شوق", "غزل", "شعر"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
