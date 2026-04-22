@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import ShareButtons from "@/components/ShareButtons";
+import Disclaimer from "@/components/Disclaimer";
 import { type Matn, type MatnChapter } from "@/lib/mutoon-data";
 
 type ReadMode = "list" | "reader" | "quiz";
@@ -406,6 +407,7 @@ export default function MatnPageClient({ matn }: { matn: Matn }) {
           ابدأ الحفظ
         </Link>
       </div>
+      <Disclaimer />
     </main>
   );
 }
