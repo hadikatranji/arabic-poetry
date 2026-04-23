@@ -27,6 +27,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const memorizePages = SAMPLE_POETS.map((poet) => ({
+    url: `${baseUrl}/memorize/${encodeURIComponent(poet.nameAr)}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -145,5 +152,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...poetPages,
     ...blogPages,
     ...mutoonPages,
+    ...memorizePages,
   ];
 }
