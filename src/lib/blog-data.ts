@@ -160,6 +160,16 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 دقائق",
     tags: ["فراق", "وداع", "شوق", "غزل", "شعر"],
   },
+  {
+    slug: "qasaid-mahmoud-darwish",
+    title: "قصائد محمود درويش — أجمل ما كتب شاعر فلسطين",
+    titleEn: "Mahmoud Darwish Poems — The Best of Palestine's Poet",
+    description:
+      "أجمل قصائد محمود درويش: بطاقة هوية، على هذه الأرض، إلى أمي، وريتا والبندقية — رحلة في عالم شاعر المنفى والأرض والحرية.",
+    date: "2026-04-23",
+    readTime: "8 دقائق",
+    tags: ["محمود درويش", "شعر فلسطيني", "مقاومة", "حب", "وطن"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
