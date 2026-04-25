@@ -170,6 +170,16 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8 دقائق",
     tags: ["محمود درويش", "شعر فلسطيني", "مقاومة", "حب", "وطن"],
   },
+  {
+    slug: "ahmad-shawqi-amir-al-shuara",
+    title: "أحمد شوقي — أمير الشعراء وديوان العصر الحديث",
+    titleEn: "Ahmad Shawqi — Prince of Poets and the Modern Arabic Canon",
+    description:
+      "أجمل قصائد أحمد شوقي: من نهج البردة ومدح النبي، إلى شعر مصر والوطن، وقم للمعلم — رحلة في عالم أمير الشعراء العرب.",
+    date: "2026-04-25",
+    readTime: "8 دقائق",
+    tags: ["أحمد شوقي", "أمير الشعراء", "نهج البردة", "مصر", "شعر"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
