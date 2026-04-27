@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  author: { "@type": "Organization", name: "مسامرات شعرية" },
+  publisher: { "@type": "Organization", name: "مسامرات شعرية", url: "https://www.shi3r.com" },
+  inLanguage: "ar",
+};
+
 const TOC = [
   { id: "intro", title: "ما هو الشعر الجاهلي؟" },
   { id: "muallaqat", title: "المعلقات السبع" },
@@ -46,6 +57,10 @@ const POETS = [
 export default function PreIslamicPoetryPost() {
   return (
     <BlogPostLayout post={post} tableOfContents={TOC}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section id="intro">
         <h2 className="text-xl text-[var(--accent)] mt-2 mb-3">ما هو الشعر الجاهلي؟</h2>
         <p>

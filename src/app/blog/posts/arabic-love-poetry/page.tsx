@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  author: { "@type": "Organization", name: "مسامرات شعرية" },
+  publisher: { "@type": "Organization", name: "مسامرات شعرية", url: "https://www.shi3r.com" },
+  inLanguage: "ar",
+};
+
 const TOC = [
   { id: "intro", title: "الغزل في الشعر العربي" },
   { id: "udhri", title: "الغزل العذري" },
@@ -70,6 +81,10 @@ const ALL_BEST = [
 export default function ArabicLovePoetryPost() {
   return (
     <BlogPostLayout post={post} tableOfContents={TOC}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section id="intro">
         <h2 className="text-xl text-[var(--accent)] mt-2 mb-3">الغزل في الشعر العربي</h2>
         <p>

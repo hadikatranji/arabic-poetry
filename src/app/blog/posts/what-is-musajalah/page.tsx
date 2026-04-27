@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  author: { "@type": "Organization", name: "مسامرات شعرية" },
+  publisher: { "@type": "Organization", name: "مسامرات شعرية", url: "https://www.shi3r.com" },
+  inLanguage: "ar",
+};
+
 const TOC = [
   { id: "what", title: "ما هي المساجلة؟" },
   { id: "rules", title: "القواعد" },
@@ -24,6 +35,10 @@ const TOC = [
 export default function WhatIsMusajalahPost() {
   return (
     <BlogPostLayout post={post} tableOfContents={TOC}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section id="what">
         <h2 className="text-xl text-[var(--accent)] mt-2 mb-3">ما هي المساجلة؟</h2>
         <p>

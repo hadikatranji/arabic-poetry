@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  author: { "@type": "Organization", name: "مسامرات شعرية" },
+  publisher: { "@type": "Organization", name: "مسامرات شعرية", url: "https://www.shi3r.com" },
+  inLanguage: "ar",
+};
+
 const TOC = [
   { id: "intro", title: "من هو المتنبي؟" },
   { id: "verses", title: "أجمل 10 أبيات" },
@@ -36,6 +47,10 @@ const VERSES = [
 export default function Top10MutanabbiPost() {
   return (
     <BlogPostLayout post={post} tableOfContents={TOC}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Intro */}
       <section id="intro">
         <h2 className="text-xl text-[var(--accent)] mt-2 mb-3">من هو المتنبي؟</h2>
