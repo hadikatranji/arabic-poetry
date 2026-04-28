@@ -125,6 +125,16 @@ const THEMES = [
     color: "#5c3d7a",
     dedicated: true,
   },
+  {
+    name: "المدح النبوي",
+    nameEn: "Prophetic Praise Poetry",
+    icon: "☪️",
+    href: "/explore/themes/madh-nabawi",
+    desc: "أجمل ما قاله الشعراء في مدح النبي ﷺ — من البردة الشريفة وبانت سعاد إلى نهج البردة",
+    examples: ["البوصيري", "حسان بن ثابت", "كعب بن زهير", "أحمد شوقي"],
+    color: "var(--gold)",
+    dedicated: true,
+  },
 ];
 
 export default function ThemesPage() {
